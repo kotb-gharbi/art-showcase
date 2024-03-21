@@ -1,0 +1,26 @@
+
+li{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.container-row{
+    padding-top: 15px;
+}
+
+.input-width{
+    width: 450px;
+}
+input{
+    background-color: #101014;
+    color: white;
+    border: 2px solid rgb(163, 163, 163);
+    height: 50px;
+    border-radius: 20px;
+}
+input:focus{
+    background-color: #101014;
+}
+input::placeholder{
+    color: rgb(117, 117, 117);
+}
