@@ -4,26 +4,26 @@
             <h4 class="mb-4 text-center">Sign-up</h4>
             <div class="mb-4 ">
                 <label for="USERNAME" class="form-label">Username</label>
-                <input type="text" class="form-control" name="USERNAME" id="USERNAME" placeholder ="Username">
+                <input type="text" class="form-control" name="USERNAME" id="USERNAME" placeholder ="Username" required>
                 
             </div>
             
             <div class="mb-4">
                 <label for="email" class="form-label ">Email</label>
-                <input type="email" name="email" id="email" class="form-control " placeholder ="example@gmail.com">
+                <input type="email" name="email" id="email" class="form-control " placeholder ="example@gmail.com" required>
                 
             </div>
 
             <div class="mb-4">
                 <label for="PASSWORD" class="form-label">Password</label>
-                <input type="text" class="form-control" name="PASSWORD" id="PASSWORD" placeholder ="Password">
+                <input type="text" class="form-control" name="PASSWORD" id="PASSWORD" placeholder ="Password" required>
                 
             </div>
            
             <p class="mb-2 text-center ">i want to register as : </p>
 
             <div class=" mb-4 radio-buttons text-center ">
-                <input type="radio" id="option1" name="options">
+                <input type="radio" id="option1" name="options" required>
                 <label for="option1">Client</label>
                 
                 <input type="radio" id="option2" name="options">
@@ -31,7 +31,7 @@
             </div>
 
             <button type="submit" class="btn custom-color  w-100 mb-4 ">Sign-up</button>
-            <p class="text-center">don't have an account ? <a class="link" routerLink='/sign-up'>Sign-up</a></p>
+            <p class="text-center">Already have an account  ? <a class="link" routerLink='/login'>Login</a></p>
             
         </form>
     </div>

@@ -8,12 +8,13 @@
 }
 input{
     background-color: #141922;
-    color: white;
+    color: white !important;
     border: none;
     height: 50px;
 }
 input:focus{
     background-color: #141922;
+    
 }
 input::placeholder{
     color: rgb(117, 117, 117);
@@ -27,6 +28,7 @@ input::placeholder{
     color: blue;
     text-decoration: none;
 }
+.btn:hover{
+    background-color: #04162f;
 
-
-
+}

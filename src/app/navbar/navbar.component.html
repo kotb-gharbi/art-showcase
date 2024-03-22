@@ -1,17 +1,39 @@
-<div class="container-fluid">
-    <div class="row container-row ">
-        <div class="d-flex justify-content-center  align-items-center">
-            <p>LOGO</p>
-            <ul class="d-flex justify-content-center align-items-center ">
-                <div></div>
-                <li>first</li>
-                <li>2nd</li>
-                <li>3rd</li>
-                <li>IMG</li>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid ">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://dummyjson.com/image/150" alt="LOGO" class="rounded small "></a>
+        
+        
+      <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto   ">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/explore" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">Explore </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/commissions" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">Commisions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="active" 
+                    [routerLinkActiveOptions]="{exact:true}">Contact</a>
+                </li>
             </ul>
-            <input type="text" placeholder="Search" name="" id="" class="form-control input-width mb-3" >
-            <button type="submit" class="btn custom-color  ">Login</button>
-            <button type="submit" class="btn custom-color ">Sign</button>
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                        <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+                <li>
+                    <a routerLink="/sign-up" class="btn custom-btn btn-sm">Sign-up</a>
+                </li>
+            </ul>
         </div>
+        
+        
     </div>
-</div>
+  </nav>
+
+
+  
