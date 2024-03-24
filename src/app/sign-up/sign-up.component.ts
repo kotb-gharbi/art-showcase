@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './sign-up.component.css'
 })
 export class SignUpComponent {
-
+  
 }

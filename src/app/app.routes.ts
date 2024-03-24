@@ -5,6 +5,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { FeedComponent } from './feed/feed.component';
 import { ContactComponent } from './contact/contact.component';
 import { CommissionsComponent } from './commissions/commissions.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditComponent } from './edit/edit.component';
 
 export const routes: Routes = [
     {path:'explore' ,component:FeedComponent,title:"Explore"},
@@ -13,5 +15,8 @@ export const routes: Routes = [
     {path:'contact' , component:ContactComponent, title:"Contact"},
     {path:'login' , component:LoginComponent, title:"Login"},
     {path:'sign-up' , component:SignUpComponent,title:"Sign-up"},
+    {path:'profile' , component:ProfileComponent,title:"Profile"},
+    {path:'profile/edit' , component:EditComponent,title:"Edit profile"},
     {path:'**' ,component:NotfoundComponent,title:"404 not found"}
+
 ];
