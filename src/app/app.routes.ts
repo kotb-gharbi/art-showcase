@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CommissionsComponent } from './commissions/commissions.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditComponent } from './edit/edit.component';
+import { UploadComponent } from './upload/upload.component';
 
 export const routes: Routes = [
     {path:'explore' ,component:FeedComponent,title:"Explore"},
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {path:'sign-up' , component:SignUpComponent,title:"Sign-up"},
     {path:'profile' , component:ProfileComponent,title:"Profile"},
     {path:'profile/edit' , component:EditComponent,title:"Edit profile"},
+    {path:'profile/upload' , component:UploadComponent,title:"Upload work"},
     {path:'**' ,component:NotfoundComponent,title:"404 not found"}
 
 ];

@@ -24,7 +24,6 @@ input::placeholder{
 
 .radio-buttons label {
     display: inline-block;
-    color: white;
     font-style: bold;
     background-color: #101014;
     padding: 10px 20px;
@@ -33,7 +32,6 @@ input::placeholder{
 
 .radio-buttons input[type="radio"]:checked + label {
     background-color: #093570;
-    color: #fff;
 }
 #option1 + label{
     border-radius: 5px 0 0 5px ;

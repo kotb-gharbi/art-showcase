@@ -14,11 +14,10 @@ h2{
 }
 
 .profile{
-    background-color: #292a2f ;
+    background-color: #202024 ;
     border: none;
     color: white;
-    border-radius: 10px;
-    
+    border-radius: 16px;   
 }
 
 .custom-btn{
@@ -30,13 +29,13 @@ h2{
 }
 
 .custom-btn:hover {
-    background-color: rgb(57, 53, 49);
+    background-color: rgb(48, 70, 132);
 }
 
 
 .skill{
     color: black;
-    background-color: bisque;
+    background-color: rgb(255, 255, 224);
     margin: 5px;
     pointer-events: none;
 }
@@ -54,7 +53,6 @@ h2{
     background-color:#353637 ;
 }
 
-
 i{
     margin-right: 5px;
     display: inline-block;
@@ -63,6 +61,7 @@ i{
 .upload{
     background-color: #101014;
     border: none;
+    margin-top: 80px;
 }
 
 
@@ -70,18 +69,13 @@ i{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     color: #fff;
 }
 .portfolio{
     font-size: 1.5rem;
 }
 
-.sp{
-    background-color: red;
-}
-
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
     .image{
         width: 100%;
         margin: 1px 0;
@@ -90,11 +84,12 @@ i{
         margin-top: 15px;
     }
   }
-@media screen and (min-width: 577px) {
+@media (min-width: 577px) {
     .image{
-        
         width: 100%;
         height: 100%;
-        
   }
+}
+.opacity{
+    opacity: .7;
 }

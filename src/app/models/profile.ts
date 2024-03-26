@@ -14,10 +14,6 @@ export class profile {
         this.headline = headline;
         this.avatar = avatar;
         this.images = images;
-        
-        
-
-
     }
 
 

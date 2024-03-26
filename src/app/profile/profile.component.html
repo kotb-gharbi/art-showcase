@@ -8,17 +8,19 @@
                         
                     <h2 class="card-title mt-2">{{profile.username}}</h2>
                     
-                    <p class="card-text text-center mt-1 ">{{profile.headline}}</p>
+                    <p class="card-text text-center mt-1 opacity">{{profile.headline}}</p>
 
                     <p class="card-text text-center mt-1 ">{{profile.description}}</p>
 
-                    <p>SKILLS :</p>
-                    <div class="text-center ">
+                    <p class="text-info ">Skills :</p>
+
+                    <div class="text-center">
                         <span *ngFor="let item of profile.skills" >
-                            <a class="btn skill "> {{item}}</a>
+                            <a class="btn skill"> {{item}}</a>
                         </span>
                     </div>
-                    <a routerLink="/profile/edit" class="btn custom-btn w-100 mt-4  ">Edit profile</a>
+
+                    <a routerLink="/profile/edit" class="btn custom-btn w-100 mt-4"> <i class="fas fa-pen"></i> Edit profile</a>
 
                 </div>
             </div>
@@ -26,22 +28,24 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="col">
-
-                    <p class="portfolio text-white "><strong> Portfolio</strong>   {{x}} artworks</p>
-                    <div *ngIf="profile.images == undefined ; else elseBlock" class="card upload">
+                    <div class="d-flex justify-content-between align-items-center px-2 ">
+                        <p class="portfolio text-white "><strong>Portfolio  </strong><span class="opacity">{{x}} artworks</span></p>
+                        <div *ngIf="profile.images && profile.images.length > 0;">
+                            <a routerLink="/profile/upload" class="btn custom-btn2"><i class="fas fa-plus"></i> add art</a>
+                        </div>
+                    </div>
+                    <div *ngIf="!profile.images || profile.images.length === 0; else elseBlock" class="card upload ">
                         <div class="card-body upload-body">
-                            <img src="../../assets/upload2.png" alt="Upload icon" class="card-img-top ">
-                            <h2 class="card-title" > Upload your artwork</h2>
-                            <p class="card-text text-center ">Fill your profile with artwork you are proud of.
-                                Get feedback on your work and build your industry network.
-                                
-                                </p>
-                            <a href="" class="btn custom-btn2"><i class="fas fa-arrow-up"></i> Upload image</a>
+                            <img src="../../assets/upload2.png" alt="Upload icon" class="card-img-top">
+                            <h2 class="card-title "> Upload your artwork</h2>
+                            <p class="card-text text-center opacity ">Fill your profile with artwork you are proud of.
+                                Get feedback on your work and build your industry network.</p>
+                            <a routerLink="/profile/upload" class="btn custom-btn2"><i class="fas fa-arrow-up"></i> Upload image</a>
                         </div>
                     </div>
                     
                     <ng-template #elseBlock>
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-md-3" *ngFor="let item of profile.images">
                                 <img [src]="item" alt="img" class="image">
                             </div>
