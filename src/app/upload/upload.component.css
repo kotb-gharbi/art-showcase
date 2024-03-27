@@ -12,7 +12,6 @@
 }
 .inp:focus{
     background-color: #141922;
-    
 }
 .inp::placeholder{
     color: rgb(117, 117, 117);
