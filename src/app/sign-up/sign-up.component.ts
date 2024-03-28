@@ -1,33 +1,59 @@
-import { HttpClient  } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { HttpClient ,HttpClientModule  } from '@angular/common/http';
+import { Component, OnInit} from '@angular/core';
+import { FormsModule,FormGroup, ReactiveFormsModule, FormControl , Validators} from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+
+
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [RouterLink,FormsModule],
+  imports: [RouterLink,FormsModule,NgIf,ReactiveFormsModule],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit {
     
+    constructor(private http : HttpClient,private router:Router) {}
 
-    constructor(private http : HttpClient) {}
+    Signup : FormGroup = new FormGroup({})
 
-    OnSignupSubmit(Signup : {Username : String , Email : String , Password : String , type : String}) {
-      console.log(Signup);
-      this.http.post("http://localhost/api/signup.php", Signup).subscribe((res) => {
-    console.log(res);
-    Swal.fire({
-      title: "Good job!",
-      text: "User created successfully!",
-      icon: "success"
-    });
-    },
-    (error) => {
-    console.error("Error:", error);
-    });}
+    ngOnInit(): void {
+        this.Signup= new FormGroup({
+          Username : new FormControl(null,[Validators.required, Validators.pattern('[a-zA-Z0-9]*')]),
+          Email : new FormControl(null , [Validators.required ,Validators.email] ),
+          Password : new FormControl(null,[Validators.required,Validators.minLength(6), Validators.pattern('[a-zA-Z0-9]*'), Validators.pattern('[a-zA-Z0-9]*')]),
+          type : new FormControl(null,Validators.required)
+        })
+    }
+
+    OnSignupSubmit() {
+
+      if(this.Signup.valid){
+        this.http.post("http://localhost/api/signup.php",this.Signup.value).subscribe((res : any) => {
+          if (res.result == "User added successfully") {
+            Swal.fire({
+              title: "Good job!",
+              text: res.result,
+              icon: "success"
+            });
+            this.router.navigate(['/login']);
+          } else {
+            Swal.fire({
+              title: "Oops...",
+              text: res.result, 
+              icon: "error"
+            });
+          }
+        },
+          (error) => {
+          console.error("Error:", error);
+          });
+        }
+        
+      }
+      
   
 }
