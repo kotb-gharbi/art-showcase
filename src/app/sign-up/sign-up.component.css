@@ -49,9 +49,6 @@ input::placeholder{
     background-color: #06234a;
 }
 
-.btn:disabled{
-    border: none;
-}
 .btn:hover{
     background-color: #04162f;
 }
