@@ -60,3 +60,12 @@ input::placeholder{
 .navbar-nav{
     margin-left: 10px;
 }
+.pfp{
+    cursor: pointer;
+}
+.dropdown-item{
+    cursor: pointer;
+}
+.dropdown-item:active {
+    background-color: #04162f;
+  }
